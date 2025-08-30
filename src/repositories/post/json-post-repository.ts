@@ -14,7 +14,7 @@ const JSON_POST_FILE_PATH = resolve(
 // o resolve serve pra verificar a barra do caminho
 // que é diferente em linux por exemplo
 
-const SIMULATE_WAIT_IN_MS = 5000;
+const SIMULATE_WAIT_IN_MS = 0;
 
 export class JsonPostRepository implements PostRepository {
   private async simulateWait() {
