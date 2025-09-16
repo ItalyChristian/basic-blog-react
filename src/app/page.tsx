@@ -32,7 +32,9 @@ export default async function Home() {
             30/08/2025 09:30
           </time>
 
-          <PostHeading>Um título maneiro</PostHeading>
+          <PostHeading url='#' as='h1'>
+            Um título maneiro
+          </PostHeading>
 
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
