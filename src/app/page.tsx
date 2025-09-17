@@ -1,11 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { Header } from '@/components/Header';
 import { PostsList } from '@/components/PostsList';
 import { SpinLoader } from '@/components/SpinLoader';
 import { Suspense } from 'react';
 import { PostHeading } from '@/components/PostHeading';
+import { PostCoverImage } from '@/components/PostCoverImage';
 
 export default async function Home() {
   return (
@@ -13,16 +12,18 @@ export default async function Home() {
       <Header />
 
       <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
-        <Link href='#' className='w-full h-full overflow-hidden rounded-xl'>
-          <Image
-            src='/images/image-1.jpg'
-            className='w-full h-full object-cover object-center group-hover:scale-105 transition'
-            alt='Post fixado'
-            width={1200}
-            height={720}
-            priority
-          />
-        </Link>
+        <PostCoverImage
+          linkProps={{
+            href: 'post/dakodpaskd',
+          }}
+          imageProps={{
+            width: 1200,
+            height: 720,
+            src: '/images/image-1.jpg',
+            alt: 'Descrição da imagem',
+            priority: true,
+          }}
+        />
 
         <div className='flex flex-col gap-4 sm:justify-center'>
           <time
