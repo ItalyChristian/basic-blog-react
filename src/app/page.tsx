@@ -5,14 +5,10 @@ import { PostFeatured } from '@/components/PostFeatured';
 
 export default async function Home() {
   return (
-    <>
-      <Suspense fallback={<SpinLoader />}>
-        <PostFeatured />
-      </Suspense>
+    <Suspense fallback={<SpinLoader />}>
+      <PostFeatured />
 
-      <Suspense fallback={<SpinLoader />}>
-        <PostsList />
-      </Suspense>
-    </>
+      <PostsList />
+    </Suspense>
   );
 }
