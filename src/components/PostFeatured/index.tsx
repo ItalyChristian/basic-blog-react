@@ -1,5 +1,6 @@
 import { PostCoverImage } from '../PostCoverImage';
 import { PostHeading } from '../PostHeading';
+import { PostSummary } from '../PostSummary';
 
 export const PostFeatured = () => {
   const postLink = `/post/dasds`;
@@ -19,25 +20,16 @@ export const PostFeatured = () => {
         }}
       />
 
-      <div className='flex flex-col gap-4 sm:justify-center'>
-        <time
-          dateTime='2025-08-30'
-          className='text-slate-600 text-sm/tight block'
-        >
-          30/08/2025 09:30
-        </time>
-
-        <PostHeading url={postLink} as='h1'>
-          Um título maneiro
-        </PostHeading>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
+      <PostSummary
+        postHeading='h1'
+        postLink={postLink}
+        createdAt='2025-08-30T00:24:38.616Z'
+        title='Um título maneiro'
+        excerpt='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
           quae nulla assumenda eveniet enim saepe dolorem ullam hic laudantium
           consectetur, ipsam exercitationem est ad, magnam velit commodi esse
-          provident delectus!
-        </p>
-      </div>
+          provident delectus!'
+      />
     </section>
   );
 };
