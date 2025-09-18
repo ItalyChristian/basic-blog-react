@@ -5,7 +5,7 @@ import { PostFeatured } from '@/components/PostFeatured';
 
 export default async function Home() {
   return (
-    <Suspense fallback={<SpinLoader />}>
+    <Suspense fallback={<SpinLoader className='min-h-29 mb-16' />}>
       <PostFeatured />
 
       <PostsList />
