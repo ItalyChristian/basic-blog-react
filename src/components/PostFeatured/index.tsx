@@ -1,9 +1,12 @@
+import { findAllPublishedPosts } from '@/lib/post/queries';
 import { PostCoverImage } from '../PostCoverImage';
-import { PostHeading } from '../PostHeading';
 import { PostSummary } from '../PostSummary';
 
-export const PostFeatured = () => {
-  const postLink = `/post/dasds`;
+export async function PostFeatured() {
+  const posts = await findAllPublishedPosts();
+  const post = posts[0];
+
+  const postLink = `/post/${post.slug}`;
 
   return (
     <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
@@ -14,8 +17,8 @@ export const PostFeatured = () => {
         imageProps={{
           width: 1200,
           height: 720,
-          src: '/images/image-1.jpg',
-          alt: 'Descrição da imagem',
+          src: post.coverImageUrl,
+          alt: post.title,
           priority: true,
         }}
       />
@@ -23,13 +26,10 @@ export const PostFeatured = () => {
       <PostSummary
         postHeading='h1'
         postLink={postLink}
-        createdAt='2025-08-30T00:24:38.616Z'
-        title='Um título maneiro'
-        excerpt='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
-          quae nulla assumenda eveniet enim saepe dolorem ullam hic laudantium
-          consectetur, ipsam exercitationem est ad, magnam velit commodi esse
-          provident delectus!'
+        createdAt={post.createdAt}
+        title={post.title}
+        excerpt={post.excerpt}
       />
     </section>
   );
-};
+}
