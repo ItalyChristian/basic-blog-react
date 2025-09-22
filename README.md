@@ -1,20 +1,17 @@
-## ItLog 
+## ItLog
 
 Projeto site de um blog (fictício).
 
-- Este projeto foi desenvolvido com: React.js, Next.js, Typescript e Tailwind CSS;
+- Este projeto foi desenvolvido com: React.js, Next.js, Typescript e Tailwind
+  CSS;
 
-- Bibliotecas: Clsx, date-fns;
-
-
-
-
-
-
+- Bibliotecas: Clsx, date-fns, Drizzle ORM, rehype-sanitize, react-markdown,
+  remark-gfm;
 
 ## Getting Started
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with
+[`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 First, run the development server:
 
@@ -28,5 +25,5 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the
+result.
