@@ -7,7 +7,9 @@ export const findAllPublishedPosts = cache(
 );
 
 export const findPostBySlug = cache(async (slug: string) => {
-  const post = await postRepository.findBySlug(slug).catch(() => undefined);
+  const post = await postRepository
+    .findBySlugPublished(slug)
+    .catch(() => undefined);
 
   if (!post) notFound();
 
