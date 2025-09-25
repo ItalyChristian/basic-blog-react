@@ -1,6 +1,6 @@
 ## ItLog
 
-Projeto site de um blog (fictício).
+Projeto site de um blog + espaço administrativo (fictício).
 
 - Este projeto foi desenvolvido com: React.js, Next.js, Typescript e Tailwind
   CSS;
